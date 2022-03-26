@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+    
+    <div class="currency-coverter mr">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <div class="currency-box border border-primary p-3 my-5">
+                        <div class="currency-details p-3">
+                            <div class="selected-country-currency-data">
+                                <p class="lead display-4">
+                                    <span class="selected-country-currency-amount"> </span>
+                                    <span class="selected-country-name"> </span>
+                                    equals
+                                </p>
+                            </div>
+                            <div class="converter-country-currency-data">
+                                <h2 class="">
+                                    <span class="converted-currency"> </span>
+                                    <span class="converted-country-name"> </span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="drop-down d-flex space-between">
+                            <div class="currency-input col-6">
+                                <input type="number" name="" id="" class="d-block w-100 form-control mb-3 input-currency">
+                                <input type="number" name="" id="" class="d-block w-100 form-control get-currency">
+                            </div>
+                            <div class="country-selection col-6">
+                                <select name="" id="" class="custom-select mb-3 from-selected-country">
+                                    
+                                    <!-- ---------- Auto Fill Country List  ---------- -->
+                                    
+                                </select>
+                                <select name="" id="" class="custom-select to-selected-country">
+
+                                    <!-- ---------- Auto Fill Country List  ---------- -->
+
+                                </select>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
