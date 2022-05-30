@@ -32,7 +32,7 @@ const UI = {
 
         if(!localStorage.getItem('country-list')){
             // fetch('https://free.currconv.com/api/v7/currencies?apiKey=20b2a9a3ec5560b2b345')
-            fetch('https://free.currconv.com/api/v7/currencies?apiKey=5b8ac88af0572fb8742a')
+            fetch('https://free.currconv.com/api/v7/currencies?apiKey=5b8ac88af0572fb8742a', {mode: 'no-cors'})
             .then(response => response.json())
             .then(response => {
 
@@ -75,7 +75,7 @@ const UI = {
 
                 let selected = selectedCountry.options[selectedCountry.selectedIndex].value;
                 let converTo = convertedCountry.options[convertedCountry.selectedIndex].value;
-                fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`)
+                fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`, {mode: 'no-cors'})
                 .then(response => response.json())
                 .then(response => {
                     let currVal = Object.values(response);
@@ -98,7 +98,7 @@ const UI = {
             currencyAmount.textContent = inputCurrency.value;
             selectedCountryName.textContent = selectedCountry.options[selectedCountry.selectedIndex].text;
 
-            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`)
+            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`, {mode: 'no-cors'})
             .then(response => response.json())
             .then(response => {
                 let currVal = Object.values(response);
@@ -112,7 +112,7 @@ const UI = {
             let selected = selectedCountry.options[selectedCountry.selectedIndex].value;
             let converTo = convertedCountry.options[convertedCountry.selectedIndex].value;
 
-            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`)
+            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`, {mode: 'no-cors'})
             .then(response => response.json())
             .then(response => {
                 let currVal = Object.values(response);
@@ -129,7 +129,7 @@ const UI = {
         inputCurrency.addEventListener('keyup', function(){
             let selected = selectedCountry.options[selectedCountry.selectedIndex].value;
             let converTo = convertedCountry.options[convertedCountry.selectedIndex].value;
-            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`)
+            fetch(`https://free.currconv.com/api/v7/convert?q=${selected}_${converTo}&compact=ultra&apiKey=5b8ac88af0572fb8742a`, {mode: 'no-cors'})
             .then(response => response.json())
             .then(response => {
                 let currVal = Object.values(response);
@@ -141,7 +141,7 @@ const UI = {
         getInputCurrency.addEventListener('keyup', function(){
             let selected = selectedCountry.options[selectedCountry.selectedIndex].value;
             let converTo = convertedCountry.options[convertedCountry.selectedIndex].value;
-            fetch(`https://free.currconv.com/api/v7/convert?q=${converTo}_${selected}&compact=ultra&apiKey=5b8ac88af0572fb8742a`)
+            fetch(`https://free.currconv.com/api/v7/convert?q=${converTo}_${selected}&compact=ultra&apiKey=5b8ac88af0572fb8742a`, {mode: 'no-cors'})
             .then(response => response.json())
             .then(response => {
                 let currVal = Object.values(response);
